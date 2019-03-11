@@ -18,14 +18,14 @@ exports.verificaToken = function(req, res, next) {
             });
         }
 
-        var usuario = decoded.usuario;
+        req.usuario = decoded.usuario;
 
         next();
 
-        /*  return res.status(200).json({
-             ok: true,
-             decoded: decoded
-         }); */
+        /* return res.status(200).json({
+            ok: true,
+            decoded: decoded
+        }); */
 
     });
 
